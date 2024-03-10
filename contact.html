@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Contact Us - Tele-Medi</title>
-</head>
-<body>
-  <header>
-    <div class="navbar">
-      <div class="logo"><a href="index.html">Tele-Medi</a></div>
-      <ul class="links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="option.html">Services</a></li>
-        <li><a href="contact.html" class="link_active">Contact</a></li>
-      </ul>
-      <a href="option.html" class="action_btn">Get Started</a>
-      <div class="toggle_btn">
-        <i class="fa-solid fa-bars"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tele-Medi</title>
+  </head>
+  <body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Tele-Medi</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="option.html">Services</a></li>
+                <li><a href="contact.html" class="link_active">Contact</a></li>
+            </ul>
+            <a href="option.html" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="option.html">Services</a></li>
+            <li><a href="contact.html" class="link_active">Contact</a></li>
+            <li><a href="option.html" class="action_btn">Get Started</a></li>
+        </div>
+    </header>
+
+    <div class="contact-section">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <p>Got any questions or feedback? Feel free to reach out to us using the form below:</p>
+          <form id="contact-form" action="mailto:tiffanyngoc17@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="dropdown_menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="option.html">Services</a></li>
-      <li><a href="contact.html" class="link_active">Contact</a></li>
-      <li><a href="option.html" class="action_btn">Get Started</a></li>
-    </div>
-  </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
 
-  <div class="contact-section">
-    <div class="container">
-      <h1>Contact Us</h1>
-      <p>Got any questions or feedback? Feel free to reach out to us using the form below:</p>
-      <form id="contact-form" action="mailto:tiffanyngoc17@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </div>
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
 
-  <script src="script.js"></script>
-</body>
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+  </body>
 </html>
+
