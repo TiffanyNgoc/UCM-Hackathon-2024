@@ -120,6 +120,10 @@ header {
     justify-content: center;
 }
 
+.dropdown_menu .link_active {
+    border-bottom: 2px solid #fff;
+}
+
 /* HOME */
 
 section#Home{
@@ -267,3 +271,86 @@ video {
     border-radius: 3px;
     cursor: pointer;
   }
+
+  /* ABOUT */
+
+  .about-section {
+    padding: 50px 20px;
+    text-align: center;
+    color: #fff; /* Set text color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+  }
+  
+  .about-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /* Contact Section */
+.contact-section {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .contact-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .contact-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #contact-form textarea {
+    resize: none;
+  }
+  
+  #contact-form button {
+    padding: 10px 20px;
+    background-color: #ffbd30;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact-form button:hover {
+    background-color: #ffebc2;
+  }
+  
